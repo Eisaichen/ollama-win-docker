@@ -11,6 +11,10 @@ on:
         description: 'Push the image'
         required: true
         type: boolean
+      latest:
+        description: 'Is latest'
+        required: true
+        type: boolean
 
 jobs:
   build:
