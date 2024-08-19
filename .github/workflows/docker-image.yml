@@ -23,6 +23,7 @@ jobs:
     env:
       GH_CI_TAG: ${{ inputs.tag }}
       GH_CI_PUSH: ${{ inputs.push }}
+      GH_CI_LATEST: ${{ inputs.latest }}
 
     steps:
       - uses: actions/checkout@v4
