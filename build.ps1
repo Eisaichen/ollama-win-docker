@@ -2,7 +2,7 @@
 Expand-Archive -Path .\ollama-windows-amd64.zip -DestinationPath .\build\ollama-windows-amd64
 
 docker pull mcr.microsoft.com/windows/servercore:ltsc2022
-if ($env:GH_CI_PUSH -eq "true") {
+if ($env:GH_CI_LATEST -eq "true") {
     docker build --isolation hyperv --no-cache -t eisai/ollama:latest -t eisai/ollama:$env:GH_CI_TAG .\build
 } else {
     docker build --isolation hyperv --no-cache -t eisai/ollama:$env:GH_CI_TAG .\build
