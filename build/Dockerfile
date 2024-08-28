@@ -14,5 +14,5 @@ RUN powershell -command "takeown /F C:\res /R /D Y /A 1> $null" ; \
     Import-Certificate -FilePath C:\res\cacert.sst -CertStoreLocation 'Cert:\LocalMachine\Root' ; \
     Remove-Item -Recurse -Force C:\res
 
-WORKDIR C:/app/bin
+WORKDIR C:/app
 ENTRYPOINT ollama.exe serve
